@@ -14,7 +14,7 @@
 # limitations under the License.
 # =========================================================================
 
-FROM rocker/r-ver:3.6.3
+FROM rocker/r-ver:4.0.2
 
 LABEL org.label-schema.license="Apache-2.0" \
       org.label-schema.vcs-url="https://github.com/tmobile/r-tensorflow-api" \
