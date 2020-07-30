@@ -329,8 +329,8 @@ score_motion <- function(df, gforce_threshold, time_cutoff, tolerance, penalty) 
 hypertune <- function(df2) {
   
   tune_window <- seq(from = 350, to = 500, by = 50)
-  tune_tolerance <- seq(from = 0.2, to = 0.3, by = 0.1)
-  tune_penalty <- seq(from = 0.4, to = 0.6, by = 0.2)
+  tune_tolerance <- seq(from = 0.2, to = 0.4, by = 0.1)
+  tune_penalty <- seq(from = 0.5, to = 0.75, by = 0.25)
   
   tune_grid <- tidyr::crossing(tune_window, tune_tolerance, tune_penalty)
   
