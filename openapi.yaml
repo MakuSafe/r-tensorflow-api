@@ -1,0 +1,18 @@
+swagger: '2.0'
+info:
+  description: API Test for Cloud Endpoints
+  title: API test Cloud Endpoints
+  version: 1.0.0
+host: https://makusmart-analytics.uc.r.appspot.com
+schemes: [http]
+produces: [application/json]
+paths:
+  /names:
+    get:
+      summary: ''
+      responses:
+        default:
+          description: Default response.
+      parameters: []
+      tags:
+      operationId: names

@@ -1,0 +1,17 @@
+runtime: custom
+env: flex
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+
+resources:
+  cpu: 1
+  memory_gb: 2
+  disk_size_gb: 10
+
+# env_variables:
+#   GCS_AUTH_FILE: auth.json
+
+endpoints_api_service:
+  name: https://makusmart-analytics.uc.r.appspot.com
+  rollout_strategy: managed
