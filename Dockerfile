@@ -16,10 +16,7 @@
 
 FROM rocker/r-ver:4.0.2
 
-LABEL org.label-schema.license="Apache-2.0" \
-      org.label-schema.vcs-url="https://github.com/tmobile/r-tensorflow-api" \
-      org.label-schema.vendor="T-Mobile" \
-      maintainer="Jacqueline Nolis (GitHub @jnolis)"
+LABEL maintainer="Nikhil Agarwal (Github @nikdata)"
       
 # update some packages, including sodium and apache2, then clean
 RUN apt-get update \
@@ -55,9 +52,11 @@ COPY src /src
 
 WORKDIR /src
 
-# run locally
-# ENTRYPOINT ["Rscript","main.R"]
-# run on cloud?
 EXPOSE 8080
-ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('rest_controller.R'); pr$run(host='0.0.0.0', port=8080)"]
-CMD ["rest_controller.R"]
+# run locally
+ENTRYPOINT ["Rscript","main.R"]
+
+# run on cloud
+
+# ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('rest_controller.R'); pr$run(host='0.0.0.0', port=8080, swagger=TRUE)"]
+# CMD ["rest_controller.R"]

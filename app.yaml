@@ -9,12 +9,6 @@ resources:
   memory_gb: 2
   disk_size_gb: 10
 
-# env_variables:
-#   GCS_AUTH_FILE: auth.json
-
-# health_check:
-#   enable_health_check: False
-
 readiness_check:
   path: "/readiness_check"
   check_interval_sec: 5
@@ -31,5 +25,5 @@ liveness_check:
   success_threshold: 2
 
 endpoints_api_service:
-  name: makusmart-analytics.uc.r.appspot.com
+  name: makusmart-analytics.appspot.com
   rollout_strategy: managed

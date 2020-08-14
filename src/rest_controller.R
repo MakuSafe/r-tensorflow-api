@@ -26,10 +26,10 @@ liveness_check<- function(){
   return ("app live")
 }
 
-source('api-solver.R')
+# source('api-solver.R')
 
 # Set an endpoint to return makusafe score
-#* @post /maku
-the_score <- function(input){
-  get_score(input)
-}
+# @post /maku
+# the_score <- function(input){
+#   get_score(input)
+# }
