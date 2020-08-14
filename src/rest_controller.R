@@ -20,12 +20,10 @@ readiness_check<- function(){
   return ("app ready")
 }
 
-source("runtime_functions.R")
-# 
-# Set an endpoint to return a pet name
-#* @get /names
-get_names <- function(){
-  generate_many_names(20, model, character_lookup, max_length)
+# Set an endpoint to tell GCP the app is alive
+#* @get /liveness_check
+liveness_check<- function(){
+  return ("app live")
 }
 
 source('api-solver.R')

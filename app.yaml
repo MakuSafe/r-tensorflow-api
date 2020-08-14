@@ -12,8 +12,8 @@ resources:
 # env_variables:
 #   GCS_AUTH_FILE: auth.json
 
-health_check:
-  enable_health_check: False
+# health_check:
+#   enable_health_check: False
 
 readiness_check:
   path: "/readiness_check"
@@ -23,6 +23,13 @@ readiness_check:
   success_threshold: 2
   app_start_timeout_sec: 300
 
+liveness_check:
+  path: "/liveness_check"
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 2
+
 endpoints_api_service:
-  name: https://makusmart-analytics.uc.r.appspot.com
+  name: makusmart-analytics.uc.r.appspot.com
   rollout_strategy: managed
