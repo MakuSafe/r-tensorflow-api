@@ -25,5 +25,5 @@ liveness_check:
   success_threshold: 2
 
 endpoints_api_service:
-  name: makusmart-analytics.uc.r.appspot.com
-  rollout_strategy: managed
+  name: makusmart-analytics.appspot.com
+  config_id: "2020-08-17r0"

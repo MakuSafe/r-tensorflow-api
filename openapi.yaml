@@ -3,26 +3,15 @@ info:
   description: API Test for Cloud Endpoints
   title: API test Cloud Endpoints
   version: 1.0.0
-host: makusmart-analytics.uc.r.appspot.com
+host: makusmart-analytics.appspot.com
 schemes: [http]
 produces: [application/json]
 paths:
   /readiness_check:
     get:
-      summary: ''
+      summary: 'Tells GCP that the app is ready'
       responses:
         default:
           description: Default response.
       parameters: []
-      tags:
       operationId: readiness_check
-
-  /liveness_check:
-    get:
-      summary: ''
-      responses:
-        default:
-          description: Default response.
-      parameters: []
-      tags:
-      operationId: liveness_check
