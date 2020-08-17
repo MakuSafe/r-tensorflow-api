@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # =========================================================================
-library(keras)
+# library(keras)
 
 # load the parameters
 source("parameters.R")
 
 # load the neural network model
-model <- load_model_hdf5("model.h5")
+# model <- load_model_hdf5("model.h5")
 
 
 # a function that generates a single pet name from a model

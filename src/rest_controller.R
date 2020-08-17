@@ -14,10 +14,22 @@
 # limitations under the License.
 # =========================================================================
 
-source("runtime_functions.R")
-
-# Set an endpoint to return a pet name
-#* @get /names
-get_names <- function(){
-  generate_many_names(20, model, character_lookup, max_length)
+# Set an endpoint to tell GCP the app is ready to serve
+#* @get /readiness_check
+readiness_check<- function(){
+  return ("app ready")
 }
+
+# Set an endpoint to tell GCP the app is alive
+#* @get /liveness_check
+liveness_check<- function(){
+  return ("app live")
+}
+
+# source('api-solver.R')
+
+# Set an endpoint to return makusafe score
+# @post /maku
+# the_score <- function(input){
+#   get_score(input)
+# }
