@@ -54,9 +54,9 @@ WORKDIR /src
 
 EXPOSE 8080
 # run locally
-ENTRYPOINT ["Rscript","main.R"]
+# ENTRYPOINT ["Rscript","main.R"]
 
 # run on cloud
 
-# ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('rest_controller.R'); pr$run(host='0.0.0.0', port=8080, swagger=TRUE)"]
-# CMD ["rest_controller.R"]
+ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('rest_controller.R'); pr$run(host='0.0.0.0', port=8080, swagger=TRUE)"]
+CMD ["rest_controller.R"]
